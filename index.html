@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Gesture Interactions - A-Frame & AR.js</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="gesture-detector.js"></script>
+    <script src="gesture-handler.js"></script>
+  </head>
+
+  <body>
+    <a-scene
+      arjs
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+      id="scene"
+    >
+      <a-assets>
+        <a-asset-item
+          id="catprawn"
+          src="https://cdn.glitch.com/113b521d-3c07-4069-828b-b229833bfda9%2Fcat_prawn.glb?v=1603373248674"
+        >
+        </a-asset-item>
+      </a-assets>
+      <a-marker
+        preset="kanji"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-entity
+          id="catprawn-model"
+          gltf-model="#catprawn"
+          position="0 0 0"
+          scale="1 1 1"
+          class="clickable"
+          gesture-handler
+        >
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

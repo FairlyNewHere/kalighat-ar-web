@@ -10,4 +10,4 @@ So, a large audience can be tapped and reached using this technology.
 You can try the experience by directly scanning the following QR code using any mobile and pointing the camera on the marker.
 There you go! Enjoy moving the model around with your fingers (zoom in, zoom out and rotate) as you like!
 
-<img src="https://github.com/FairlyNewHere/kalighat-ar-web/blob/glitch/kalighat%20-%20ar%20-%20web%20-%20qr.png">
+<img src="https://github.com/FairlyNewHere/kalighat-ar-web/blob/glitch/kalighat%20-%20ar%20-%20web%20-%20qr.png" width="500" height="500">
